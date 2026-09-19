@@ -1,0 +1,5 @@
+gui-wm/niri ~amd64
+gui-apps/xwayland-satellite ~amd64
+
+# rime輸入法
+app-i18n/rime-ice **

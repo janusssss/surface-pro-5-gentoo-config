@@ -1,0 +1,27 @@
+### white list ##
+/*
+*~
+
+!/.gitignore
+
+# 用户配置
+!/home/
+!/home/*
+!/home/janus/
+/home/janus/*
+!/home/janus/.config/
+/home/janus/.config/*
+!/home/janus/.config/niri/
+!/home/janus/.config/foot/
+!/home/janus/.config/nvim/
+/home/janus/.config/nvim/lazy-lock.json
+!/home/janus/.config/fish/
+
+# gentoo配置
+!/etc/
+/etc/*
+!/etc/portage/
+/etc/portage/gnupg/
+/etc/portage/kernel_key.pem
+
+!/README.md

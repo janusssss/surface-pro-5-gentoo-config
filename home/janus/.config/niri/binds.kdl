@@ -1,0 +1,52 @@
+
+
+binds {
+    Mod+Z { spawn "fuzzel"; }
+
+    Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "footclient"; }
+    
+    Mod+B { spawn "firefox"; }
+    
+    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+5%"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%-"; }
+ // 单击 
+    Ctrl+Shift+Alt+I  { spawn-sh "ydotool click 0xC0";}
+    Ctrl+Shift+Alt+U { spawn-sh "ydotool click 0x40";}
+    Ctrl+Shift+Alt+N { spawn-sh "ydotool click 0x80";}
+ // 右击 
+    Ctrl+Shift+Alt+O  { spawn-sh "ydotool click 0xC1";}
+//  左移 
+    Ctrl+Shift+Alt+H  { spawn-sh "ydotool mousemove -x -15 -y 0"; }
+    Ctrl+Alt+H  { spawn-sh "ydotool mousemove -x -80 -y 0"; }
+//  下移
+    Ctrl+Shift+Alt+J  { spawn-sh "ydotool mousemove -x 0 -y 15"; }
+    Ctrl+Alt+J  { spawn-sh "ydotool mousemove -x 0 -y 80"; }
+//  上移
+    Ctrl+Shift+Alt+K  { spawn-sh "ydotool mousemove -x 0 -y -15"; }
+    Ctrl+Alt+K  { spawn-sh "ydotool mousemove -x 0 -y -80"; }
+//  右移
+    Ctrl+Shift+Alt+L  { spawn-sh "ydotool mousemove -x 15 -y 0"; }
+    Ctrl+Alt+L  { spawn-sh "ydotool mousemove -x 80 -y 0"; }
+
+    // 向上滚动3格
+    Shift+Alt+K { spawn-sh "ydotool mousemove -w -- 0 1"; }
+    // 向下滚动3格  
+    Shift+Alt+J { spawn-sh "ydotool mousemove -w -- 0 -1"; }
+    
+    // 截图相关
+    // 截图前创建一个用来触发截图音效进程的token
+    Mod+Alt+A  hotkey-overlay-title="选取区域截图 Select screenshot"  {spawn-sh "niri msg action screenshot --show-pointer false && pkill -f -USR1 screenshot-sound.sh";}
+    Mod+Alt+Ctrl+A  hotkey-overlay-title="截取聚焦窗口 Focus-window screenshot" { spawn-sh "niri msg action screenshot-window && pkill -f -USR1 screenshot-sound.sh"; }
+    Mod+Alt+Ctrl+Shift+A  hotkey-overlay-title="截取显示器 Monitor screenshot" { spawn-sh "niri msg action screenshot-screen --show-pointer false && pkill -f -USR1 screenshot-sound.sh"; }
+    Print  hotkey-overlay-title=null {spawn-sh "niri msg action screenshot --show-pointer false && pkill -f -USR1 screenshot-sound.sh";}
+    Ctrl+Print  hotkey-overlay-title=null { spawn-sh "niri msg action screenshot-window --show-pointer false && pkill -f -USR1 screenshot-sound.sh"; }
+    Shift+Print  hotkey-overlay-title=null { spawn-sh "niri msg action screenshot-screen --show-pointer false && pkill -f -USR1 screenshot-sound.sh"; }
+
+    // 剪贴板程序，对应aur包shorinclip-git
+    Mod+Alt+V hotkey-overlay-title="剪贴板 Clipboard" {spawn-sh "footclient -a cliphist-tui cliphist-tui";} 
+  }
+
+
+
+
+

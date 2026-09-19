@@ -1,0 +1,7 @@
+sys-kernel/installkernel grub
+# required by app-portage/pfl-3.5.3::gentoo[network-cron]
+# required by app-portage/pfl (argument)
+>=sys-apps/util-linux-2.42.3 caps
+# required by sys-kernel/gentoo-kernel-bin-7.2.6::gentoo[initramfs]
+# required by virtual/dist-kernel-7.2.6::gentoo
+>=sys-kernel/installkernel-70 dracut
