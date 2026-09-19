@@ -27,6 +27,9 @@
 !/etc/
 /etc/*
 !/etc/inittab
+!/etc/ssh/
+/etc/ssh/*
+!/etc/ssh/sshd_config
 !/etc/portage/
 /etc/portage/gnupg/
 /etc/portage/kernel_key.pem
