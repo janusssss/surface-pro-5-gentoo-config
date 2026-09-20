@@ -6,16 +6,6 @@ end
 
 starship init fish | source
 
-# 设置终端文件浏览器yazi保存当前目录
-function yazi
-    set tmp (mktemp -t "yazi-cwd.XXXXXX")
-    yazi $argv --cwd-file="$tmp"
-    if read -z cwd <"$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-        builtin cd -- "$cwd"
-    end
-    rm -f -- "$tmp"
-end
-
 # 替换ls命令
 function ls
     command eza --icons $argv
@@ -28,6 +18,12 @@ end
 
 function reboot
     command sudo reboot
+end
+function poweroff
+    command sudo poweroff
+end
+function rc-service
+    command sudo rc-service
 end
 
 # grub
