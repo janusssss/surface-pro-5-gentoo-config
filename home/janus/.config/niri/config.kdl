@@ -3,6 +3,8 @@ include "startup.kdl"
 include "binds.kdl"
 // 显示屏配置
 include "output.kdl"
+// 环境变量
+include "environment.kdl"
 
 
 // This config is in the KDL format: https://kdl.dev

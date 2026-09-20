@@ -13,6 +13,7 @@
 !/home/janus/.bashrc
 /home/janus/.config/*
 !/home/janus/.config/niri/
+!/home/janus/.config/starship.toml
 !/home/janus/.config/foot/
 !/home/janus/.config/nvim/
 /home/janus/.config/nvim/lazy-lock.json
@@ -22,6 +23,7 @@
 !/root/
 /root/*
 !/root/.bashrc
+!/root/.config
 
 # gentoo配置
 !/etc/
