@@ -18,6 +18,16 @@
 !/home/janus/.config/nvim/
 /home/janus/.config/nvim/lazy-lock.json
 !/home/janus/.config/fish/
+# rime
+!/home/janus/.local/
+/home/janus/.local/*
+!/home/janus/.local/share/
+/home/janus/.local/share/*
+!/home/janus/.local/share/fcitx5/
+/home/janus/.local/share/fcitx5/*
+!/home/janus/.local/share/fcitx5/rime/
+/home/janus/.local/share/fcitx5/rime/*
+!/home/janus/.local/share/fcitx5/rime/default.yaml
 
 # root配置
 !/root/
