@@ -1,0 +1,44 @@
+app-editors/neovim
+
+# 输入法
+app-i18n/fcitx
+app-i18n/fcitx-configtool
+app-i18n/fcitx-rime
+
+
+app-misc/fastfetch
+dev-vcs/git
+
+# niri
+gui-apps/foot
+gui-apps/fuzzel
+gui-apps/qt6ct
+gui-apps/swaybg
+gui-apps/waybar
+gui-apps/waypaper
+gui-apps/wl-clipboard
+gui-apps/xwayland-satellite
+gui-wm/niri
+media-fonts/maple-mono
+app-misc/brightnessctl
+app-misc/yazi
+app-shells/fish
+
+# GUI声音管理
+media-sound/alsa-utils
+media-video/pipewire
+media-sound/playerctl
+
+net-dns/avahi
+net-misc/chrony
+net-proxy/mihomo
+net-wireless/iwd
+sys-apps/eza
+sys-auth/nss-mdns
+sys-devel/bc
+sys-devel/distcc
+sys-process/htop
+www-client/firefox
+x11-apps/xinput
+# 键盘模拟鼠标
+x11-misc/ydotool

@@ -16,5 +16,6 @@ spawn-at-startup "~/.config/niri/script/rotate.sh"
 // 剪贴板守护进程
 //cliphist
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
-
+// pipewire会话管理器，音频软件需要通过它播放声音
+spawn-at-startup "gentoo-pipewire-launcher"
 
