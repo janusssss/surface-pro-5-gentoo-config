@@ -28,6 +28,14 @@
 !/home/janus/.local/share/fcitx5/rime/
 /home/janus/.local/share/fcitx5/rime/*
 !/home/janus/.local/share/fcitx5/rime/default.yaml
+# electron类软件兼容wayland配置
+!/usr/
+/usr/*
+!/usr/share/
+/usr/share/*
+!/usr/share/applications/
+/usr/share/applications/*
+!/usr/share/applications/qq.desktop
 
 # root配置
 !/root/
