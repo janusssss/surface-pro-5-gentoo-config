@@ -4,15 +4,12 @@ spawn-at-startup "waybar"
 spawn-at-startup "foot" "-s"
 // 输入法
 spawn-at-startup "fcitx5"
-// 启动键盘模拟鼠标
-spawn-at-startup "ydotoold"
+// 启动键盘模拟鼠标,openrc环境下udev没有生效,需要手动触发
+spawn-at-startup "sh" "-c" "sudo modprobe -r uinput && sudo modprobe uinput && ydotoold"
 // 更换壁纸
 spawn-at-startup "sh" "-c" "sleep 0.5 && waypaper --random --back swaybg"
 // 自动旋转屏幕
 spawn-at-startup "~/.config/niri/script/rotate.sh"  
-//内网穿透
-//spawn-at-startup "bash" "-c" "vnt-cli -s [2a01:4f8:162:54d9:1c1::]:29872 -k 27149 --use-channel p2p"
-//spawn-at-startup "bash" "-c" "sleep 3 && sudo ip link set up vnt-tun"
 // 剪贴板守护进程
 //cliphist
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store"

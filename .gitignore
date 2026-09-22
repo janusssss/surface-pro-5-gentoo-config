@@ -37,6 +37,15 @@
 /usr/share/applications/*
 !/usr/share/applications/qq.desktop
 
+!/etc/
+/etc/*
+# udev规则
+!/etc/udev/
+/etc/udev/*
+!/etc/udev/rules.d/
+/etc/udev/rules.d/*
+!/etc/udev/rules.d/99-uinput.rules
+
 # root配置
 !/root/
 /root/*
@@ -44,8 +53,6 @@
 !/root/.config
 
 # gentoo配置
-!/etc/
-/etc/*
 !/etc/inittab
 !/etc/ssh/
 /etc/ssh/*

@@ -1,13 +1,12 @@
-app-editors/neovim
-
 # 输入法
 app-i18n/fcitx
 app-i18n/fcitx-configtool
 app-i18n/fcitx-rime
 
 
-app-misc/fastfetch
+# 编程工具
 dev-vcs/git
+app-editors/neovim
 
 # niri
 gui-apps/foot
@@ -23,22 +22,16 @@ media-fonts/maple-mono
 app-misc/brightnessctl
 app-misc/yazi
 app-shells/fish
-
+app-misc/fastfetch
+net-proxy/mihomo
 # GUI声音管理
 media-sound/alsa-utils
 media-video/pipewire
 media-sound/playerctl
 
-net-dns/avahi
-net-misc/chrony
-net-proxy/mihomo
+# 系统工具
 net-wireless/iwd
-sys-apps/eza
-sys-auth/nss-mdns
-sys-devel/bc
-sys-devel/distcc
-sys-process/htop
-www-client/firefox
-x11-apps/xinput
-# 键盘模拟鼠标
-x11-misc/ydotool
+sys-devel/bc # 计算器
+x11-misc/ydotool # 键盘模拟鼠标
+sys-apps/eza # 高级版ls
+net-misc/chrony # 时间同步
