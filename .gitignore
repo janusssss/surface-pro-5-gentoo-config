@@ -18,6 +18,8 @@
 !/home/janus/.config/nvim/
 /home/janus/.config/nvim/lazy-lock.json
 !/home/janus/.config/fish/
+!/home/janus/.config/waybar/
+
 # rime
 !/home/janus/.local/
 /home/janus/.local/*

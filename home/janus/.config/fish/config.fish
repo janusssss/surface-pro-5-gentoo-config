@@ -11,20 +11,16 @@ function ls
     command eza --icons $argv
 end
 
-# emerge命令自动sudo
-function emerge
-    command sudo emerge $argv
+# 命令加sudo
+function sudo-command
+    set -l cmd $argv[1]
+    set -l args $argv[2..-1]
+    command sudo $cmd $args
 end
-
-function reboot
-    command sudo reboot
-end
-function poweroff
-    command sudo poweroff
-end
-function rc-service
-    command sudo rc-service
-end
+alias reboot='sudo-command reboot'
+alias poweroff='sudo-command poweroff'
+alias rc-service='sudo-command rc-service'
+alias rc-status='sudo-command rc-status'
 
 # grub
 abbr grub 'LANGUAGE=en_US.UTF-8 LANG=en_US.UTF-8 sudo grub-mkconfig -o /boot/grub/grub.cfg'

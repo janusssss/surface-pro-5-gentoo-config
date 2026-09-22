@@ -1,3 +1,9 @@
 media-libs/libvpx postproc
 # 支持jpg格式的图片
 gui-apps/swaybg gdk-pixbuf
+# 任务栏waybar 显示wifi
+gui-apps/waybar network niri tray
+# required by gui-apps/waybar-0.15.0::gentoo[tray]
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libdbusmenu-16.04.0-r4 gtk3

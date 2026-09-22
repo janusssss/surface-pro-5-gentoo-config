@@ -1,0 +1,116 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": ["custom/media","custom/lyrics"],
+    "modules-center": ["cpu", "memory", "custom/speed", "tray"],
+    "modules-right": ["network","backlight","pulseaudio", "battery", "clock"],
+
+    "custom/lyrics": {
+      "return-type": "json",
+      "format": "{icon} {0}",
+      "hide-empty-text": true,
+      "format-icons": {
+        "playing": "",
+        "paused": "",
+        "lyric": "",
+        "music": "󰝚",
+        "no_lyric": "",
+        "getting": "",
+      },
+      "exec-if": "which waybar-lyric",
+      "exec": "waybar-lyric --quiet",
+      "on-click": "waybar-lyric play-pause",
+    },
+
+    "cava": {
+        "cava_config": "/home/janus/.config/waybar/waybar_raw.conf",
+        "input_delay": 2,
+        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "actions": {
+                   "on-click-right": "mode"
+                   }
+    },
+
+    "custom/speed": {
+        "exec": "~/.config/waybar/script/speed.sh",
+        "format": "↓{}",
+        "interval": 1
+    },
+
+
+    "clock": {
+        "format-alt": "{:%Y-%m-%d %H:%M:%S}",
+        "format": "{:%Y年%m月%d日 %H:%M:%S}",
+        "interval": 1,
+        "tooltip": false
+    },
+
+    "cpu": {
+        "interval": 3,
+        "format": " {usage}%"
+    },
+
+     "memory": {
+        "interval": 3,
+        "format": " {}%"
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": "  {essid}",
+        "format-ethernet": " {ifname}",
+        "format-disconnected": "",
+        "tooltip-format-wifi": "{signalStrength}%",
+        "max-length": 20
+    },
+    "custom/media": {
+        "format": "{}",
+        "interval": 1,
+        "exec": "$HOME/.config/waybar/get_media.sh"
+    },
+  
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol"
+    },
+  "tray": {
+        // "icon-size": 21,
+        "spacing": 10,
+        // "icons": {
+        //   "blueman": "bluetooth",
+        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        // }
+    }, 
+
+  "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "min-brightness": 1
+    },
+
+}
