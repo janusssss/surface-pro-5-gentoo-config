@@ -11,6 +11,7 @@
 /home/janus/*
 !/home/janus/.config/
 !/home/janus/.bashrc
+!/home/janus/.profile
 /home/janus/.config/*
 !/home/janus/.config/niri/
 !/home/janus/.config/starship.toml
